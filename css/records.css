@@ -1,0 +1,63 @@
+.records {
+  width: 100%;
+  user-select: none;
+  text-align: center;
+}
+
+.records th {
+  height: 50px;
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  text-align: center;
+}
+.records td {
+  height: 50px;
+  text-align: center;
+}
+
+.records th:first-child,
+.records td:first-child {
+  width: 40%;
+}
+
+.records th,
+.records td {
+  width: 30%;
+}
+
+.records tr:hover {
+  background-color: var(--secundary-color);
+}
+
+@media (max-width: 600px) {
+  .records th:first-child,
+  .records td:first-child {
+    width: 20%;
+  }
+
+  .records th,
+  .records td {
+    width: 20%;
+  }
+  .records {
+    border-spacing: 5px;
+  }
+  .records thead {
+    display: none;
+  }
+  .records tbody {
+    position: relative;
+    top: 50px;
+  }
+  .records tr {
+    box-shadow: 0 1px 3px var(--shadow-color);
+  }
+
+  .records td {
+    margin: 10px 0;
+  }
+
+  .records tr:hover {
+    background-color: inherit;
+  }
+}

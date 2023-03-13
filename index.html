@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/records.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script src="main.js" defer></script>
+    <title>Assistir</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">"To-Watch" List</h1>
+    </header>
+    <main>
+      <button
+        type="button"
+        class="button purple mobile material-symbols-outlined"
+        id="addObra"
+      >
+        add
+      </button>
+      <table class="records" id="tabela">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2>Assistir</h2>
+            <span class="modal-close" id="modalClose">&#10006;</span>
+          </header>
+          <form class="modal-form" id="form">
+            <input
+              type="text"
+              data-indice="new"
+              class="modal-field"
+              id="nome"
+              placeholder="Nome"
+              required
+            />
+            <select
+              name="categoria"
+              data-indice="new"
+              class="modal-field"
+              id="categoria"
+              required
+            >
+              <option value="Filme">Filme</option>
+              <option value="Série">Série</option>
+              <option value="Documentário">Documentário</option>
+              <option value="Anime">Anime</option>
+            </select>
+          </form>
+          <footer class="modal-footer">
+            <button class="button green" id="salvar">Salvar</button>
+            <button class="button purple" id="cancelar">Cancelar</button>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
